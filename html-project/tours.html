@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Packages - IPTours.lk</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-white text-[#0a1628] min-h-screen">
+    <!-- Navbar -->
+    <nav class="bg-[#132640] border-b border-[#3b82f6]/20 sticky top-0 z-50 shadow-lg" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <span class="text-2xl text-[#fbbf24]">✦</span>
+                    <span class="text-xl text-[#e8edf5] tracking-wide">IPTours.lk</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html" class="text-[#e8edf5] hover:text-[#fbbf24] transition-colors">Home</a>
+                    <a href="tours.html" class="text-[#e8edf5] hover:text-[#fbbf24] transition-colors">Tour Packages</a>
+                    <a href="about.html" class="text-[#e8edf5] hover:text-[#fbbf24] transition-colors">About Us</a>
+                    <a href="blog.html" class="text-[#e8edf5] hover:text-[#fbbf24] transition-colors">Blog</a>
+                    <a href="contact.html" class="text-[#e8edf5] hover:text-[#fbbf24] transition-colors">Contact</a>
+                    <button class="bg-[#fbbf24] hover:bg-[#f59e0b] text-[#0a1628] px-6 py-2 rounded-lg transition-colors">Book Now</button>
+                </div>
+                <button class="md:hidden p-2 rounded-lg hover:bg-[#1e3a8a]/30 transition-colors text-[#e8edf5]" id="mobile-menu-btn">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+            <div class="md:hidden hidden py-4 border-t border-[#3b82f6]/20" id="mobile-menu">
+                <div class="flex flex-col space-y-3">
+                    <a href="index.html" class="text-[#e8edf5] hover:text-[#fbbf24] transition-colors">Home</a>
+                    <a href="tours.html" class="text-[#e8edf5] hover:text-[#fbbf24] transition-colors">Tour Packages</a>
+                    <a href="about.html" class="text-[#e8edf5] hover:text-[#fbbf24] transition-colors">About Us</a>
+                    <a href="blog.html" class="text-[#e8edf5] hover:text-[#fbbf24] transition-colors">Blog</a>
+                    <a href="contact.html" class="text-[#e8edf5] hover:text-[#fbbf24] transition-colors">Contact</a>
+                    <button class="bg-[#fbbf24] hover:bg-[#f59e0b] text-[#0a1628] w-full py-2 rounded-lg transition-colors">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="relative h-64 bg-cover bg-center" style="background-image: url(https://images.unsplash.com/photo-1643883276945-ca185200c7b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzcmklMjBsYW5rYSUyMHNjZW5pYyUyMGxhbmRzY2FwZXxlbnwxfHx8fDE3NjI5NjEzNjJ8MA&ixlib=rb-4.1.0&q=80&w=1080)">
+        <div class="absolute inset-0 bg-gradient-to-r from-[#0a1628]/95 via-[#1e3a8a]/90 to-[#0a1628]/95"></div>
+        <div class="absolute inset-0 flex items-center justify-center">
+            <div class="text-center text-white">
+                <h1 class="text-4xl md:text-5xl mb-2 text-[#fbbf24] font-medium drop-shadow-lg">Tour Packages</h1>
+                <p class="text-lg text-gray-200">Discover your perfect Sri Lankan adventure</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tour Grid -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-24 relative bg-white">
+        <div class="absolute inset-0 pattern-dots opacity-10"></div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10" id="tours-grid">
+            <!-- Tours will be populated by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[#0a1628] text-white border-t border-[#3b82f6]/20 relative overflow-hidden">
+        <div class="absolute inset-0 pattern-circuit opacity-30"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <span class="text-2xl text-[#fbbf24]">✦</span>
+                        <span class="text-xl tracking-wide">IPTours.lk</span>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-3">
+                        Discover Sri Lanka's finest destinations with personalized luxury tours designed for unforgettable experiences.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg mb-4 text-[#fbbf24]">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-[#fbbf24] transition-colors text-sm">Home</a></li>
+                        <li><a href="tours.html" class="text-gray-400 hover:text-[#fbbf24] transition-colors text-sm">Tour Packages</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-[#fbbf24] transition-colors text-sm">About Us</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-[#fbbf24] transition-colors text-sm">Blog</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-[#fbbf24] transition-colors text-sm">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg mb-4 text-[#fbbf24]">Contact Us</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start space-x-2">
+                            <i data-lucide="map-pin" class="w-4 h-4 mt-1 text-[#fbbf24] flex-shrink-0"></i>
+                            <span class="text-gray-400 text-sm">123 Galle Road, Colombo 03, Sri Lanka</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i data-lucide="phone" class="w-4 h-4 text-[#fbbf24] flex-shrink-0"></i>
+                            <span class="text-gray-400 text-sm">+94 11 234 5678</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i data-lucide="mail" class="w-4 h-4 text-[#fbbf24] flex-shrink-0"></i>
+                            <span class="text-gray-400 text-sm">info@IPTours.lk</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg mb-4 text-[#fbbf24]">Follow Us</h3>
+                    <div class="flex space-x-3">
+                        <a href="#" class="w-10 h-10 rounded-full bg-[#1e3a8a] flex items-center justify-center hover:bg-[#fbbf24] hover:text-[#0a1628] transition-colors">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-[#1e3a8a] flex items-center justify-center hover:bg-[#fbbf24] hover:text-[#0a1628] transition-colors">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-[#1e3a8a] flex items-center justify-center hover:bg-[#fbbf24] hover:text-[#0a1628] transition-colors">
+                            <i data-lucide="twitter" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-[#3b82f6]/20 mt-8 pt-6 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 IPTours.lk. All rights reserved. Crafted with excellence.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="tours.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
+

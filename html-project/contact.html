@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - IPTours.lk</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-white text-gray-900">
+    <!-- Navbar -->
+    <nav class="bg-[#132640] border-b border-[#3b82f6]/20 sticky top-0 z-50 shadow-lg" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <span class="text-2xl text-[#fbbf24]">✦</span>
+                    <span class="text-xl text-[#e8edf5] tracking-wide">IPTours.lk</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html" class="text-[#e8edf5] hover:text-[#fbbf24] transition-colors">Home</a>
+                    <a href="tours.html" class="text-[#e8edf5] hover:text-[#fbbf24] transition-colors">Tour Packages</a>
+                    <a href="about.html" class="text-[#e8edf5] hover:text-[#fbbf24] transition-colors">About Us</a>
+                    <a href="blog.html" class="text-[#e8edf5] hover:text-[#fbbf24] transition-colors">Blog</a>
+                    <a href="contact.html" class="text-[#e8edf5] hover:text-[#fbbf24] transition-colors">Contact</a>
+                    <button class="bg-[#fbbf24] hover:bg-[#f59e0b] text-[#0a1628] px-6 py-2 rounded-lg transition-colors">Book Now</button>
+                </div>
+                <button class="md:hidden p-2 rounded-lg hover:bg-[#1e3a8a]/30 transition-colors text-[#e8edf5]" id="mobile-menu-btn">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+            <div class="md:hidden hidden py-4 border-t border-[#3b82f6]/20" id="mobile-menu">
+                <div class="flex flex-col space-y-3">
+                    <a href="index.html" class="text-[#e8edf5] hover:text-[#fbbf24] transition-colors">Home</a>
+                    <a href="tours.html" class="text-[#e8edf5] hover:text-[#fbbf24] transition-colors">Tour Packages</a>
+                    <a href="about.html" class="text-[#e8edf5] hover:text-[#fbbf24] transition-colors">About Us</a>
+                    <a href="blog.html" class="text-[#e8edf5] hover:text-[#fbbf24] transition-colors">Blog</a>
+                    <a href="contact.html" class="text-[#e8edf5] hover:text-[#fbbf24] transition-colors">Contact</a>
+                    <button class="bg-[#fbbf24] hover:bg-[#f59e0b] text-[#0a1628] w-full py-2 rounded-lg transition-colors">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="relative h-64 bg-cover bg-center" style="background-image: url(https://images.unsplash.com/photo-1643883276945-ca185200c7b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzcmklMjBsYW5rYSUyMHNjZW5pYyUyMGxhbmRzY2FwZXxlbnwxfHx8fDE3NjI5NjEzNjJ8MA&ixlib=rb-4.1.0&q=80&w=1080)">
+        <div class="absolute inset-0 bg-gradient-to-r from-[#0a1628]/95 via-[#1e3a8a]/90 to-[#0a1628]/95"></div>
+        <div class="absolute inset-0 flex items-center justify-center">
+            <div class="text-center text-white">
+                <h1 class="text-4xl md:text-5xl mb-2 text-[#fbbf24] font-medium drop-shadow-lg">Contact Us</h1>
+                <p class="text-lg text-gray-200">We're here to help plan your perfect journey</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Intro Text -->
+    <section class="py-12 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-lg text-gray-600 leading-relaxed">
+                Have questions about our tours or need help planning your Sri Lankan adventure? Our team of 
+                travel experts is ready to assist you. Reach out through any of the channels below, and we'll 
+                respond promptly to ensure your journey is perfectly tailored to your dreams.
+            </p>
+        </div>
+    </section>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            <!-- Contact Form -->
+            <div class="lg:col-span-2">
+                <div class="bg-white border border-gray-200 rounded-lg p-8">
+                    <h2 class="text-4xl md:text-5xl mb-6 text-[#1e40af] font-semibold">Send Us a Message</h2>
+                    <form class="space-y-6" id="contact-form">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block mb-2 text-gray-700">Full Name *</label>
+                                <input type="text" id="name" name="name" placeholder="John Doe" required class="w-full h-12 px-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1e40af]">
+                            </div>
+                            <div>
+                                <label for="email" class="block mb-2 text-gray-700">Email Address *</label>
+                                <input type="email" id="email" name="email" placeholder="john@example.com" required class="w-full h-12 px-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1e40af]">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="phone" class="block mb-2 text-gray-700">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+1 234 567 8900" class="w-full h-12 px-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1e40af]">
+                            </div>
+                            <div>
+                                <label for="subject" class="block mb-2 text-gray-700">Subject *</label>
+                                <input type="text" id="subject" name="subject" placeholder="Tour Inquiry" required class="w-full h-12 px-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1e40af]">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="message" class="block mb-2 text-gray-700">Message *</label>
+                            <textarea id="message" name="message" placeholder="Tell us about your travel plans and preferences..." required rows="6" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1e40af] resize-none"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-[#fbbf24] hover:bg-[#f59e0b] text-[#0a1628] font-medium h-12 rounded-lg transition-colors flex items-center justify-center gap-2">
+                            <i data-lucide="send" class="w-4 h-4"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="space-y-6">
+                <!-- Business Info Card -->
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                    <h3 class="text-xl mb-6 text-[#1e40af] font-semibold">Get In Touch</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-[#1e3a8a]/10 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="map-pin" class="w-5 h-5 text-[#1e3a8a]"></i>
+                            </div>
+                            <div>
+                                <h4 class="mb-1 text-gray-900">Office Address</h4>
+                                <p class="text-gray-600 text-sm">
+                                    123 Galle Road<br />
+                                    Colombo 03<br />
+                                    Sri Lanka
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-[#1e3a8a]/10 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="phone" class="w-5 h-5 text-[#1e3a8a]"></i>
+                            </div>
+                            <div>
+                                <h4 class="mb-1 text-gray-900">Phone</h4>
+                                <p class="text-gray-600 text-sm">+94 11 234 5678</p>
+                                <p class="text-gray-600 text-sm">+94 77 234 5678</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-[#1e3a8a]/10 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="mail" class="w-5 h-5 text-[#1e3a8a]"></i>
+                            </div>
+                            <div>
+                                <h4 class="mb-1 text-gray-900">Email</h4>
+                                <p class="text-gray-600 text-sm">info@IPTours.lk</p>
+                                <p class="text-gray-600 text-sm">bookings@IPTours.lk</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-[#1e3a8a]/10 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="clock" class="w-5 h-5 text-[#1e3a8a]"></i>
+                            </div>
+                            <div>
+                                <h4 class="mb-1 text-gray-900">Business Hours</h4>
+                                <p class="text-gray-600 text-sm">Mon - Fri: 9:00 AM - 6:00 PM</p>
+                                <p class="text-gray-600 text-sm">Sat: 9:00 AM - 1:00 PM</p>
+                                <p class="text-gray-600 text-sm">Sun: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- WhatsApp Card -->
+                <div class="bg-gradient-to-br from-[#1e3a8a] to-[#1e40af] text-white rounded-lg p-6">
+                    <div class="text-center">
+                        <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-white/10 mb-4">
+                            <i data-lucide="message-circle" class="w-7 h-7 text-[#fbbf24]"></i>
+                        </div>
+                        <h3 class="text-xl mb-2 font-semibold">Chat with Us</h3>
+                        <p class="text-sm text-gray-200 mb-4">
+                            Get instant responses to your questions via WhatsApp
+                        </p>
+                        <button onclick="window.open('https://wa.me/94112345678', '_blank')" class="w-full bg-[#fbbf24] hover:bg-[#f59e0b] text-[#0a1628] py-2 rounded-lg transition-colors flex items-center justify-center gap-2 font-medium">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                            Start WhatsApp Chat
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Social Media Card -->
+                <div class="bg-gradient-to-br from-[#1e3a8a] to-[#1e40af] text-white rounded-lg p-6">
+                    <h3 class="text-xl mb-4 font-semibold">Follow Us</h3>
+                    <p class="text-gray-200 text-sm mb-4">
+                        Stay connected for travel inspiration and exclusive offers
+                    </p>
+                    <div class="flex gap-3">
+                        <button class="w-10 h-10 rounded-full bg-white/15 hover:bg-[#fbbf24] hover:text-[#0a1628] flex items-center justify-center transition-colors">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </button>
+                        <button class="w-10 h-10 rounded-full bg-white/15 hover:bg-[#fbbf24] hover:text-[#0a1628] flex items-center justify-center transition-colors">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </button>
+                        <button class="w-10 h-10 rounded-full bg-white/15 hover:bg-[#fbbf24] hover:text-[#0a1628] flex items-center justify-center transition-colors">
+                            <i data-lucide="twitter" class="w-5 h-5"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Map -->
+        <div class="mt-16">
+            <div class="bg-white border border-gray-200 rounded-lg overflow-hidden">
+                <div class="h-96 bg-gray-200">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126743.59277041241!2d79.77380469726563!3d6.927078599999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2593cf65a1e9d%3A0x9502ecbfdc9db82a!2sColombo%2C%20Sri%20Lanka!5e0!3m2!1sen!2sus!4v1699000000000!5m2!1sen!2sus"
+                        width="100%"
+                        height="100%"
+                        style="border: 0"
+                        allowfullscreen
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[#0a1628] text-white border-t border-[#3b82f6]/20 relative overflow-hidden mt-16">
+        <div class="absolute inset-0 pattern-circuit opacity-30"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <span class="text-2xl text-[#fbbf24]">✦</span>
+                        <span class="text-xl tracking-wide">IPTours.lk</span>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-3">
+                        Discover Sri Lanka's finest destinations with personalized luxury tours designed for unforgettable experiences.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg mb-4 text-[#fbbf24]">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-[#fbbf24] transition-colors text-sm">Home</a></li>
+                        <li><a href="tours.html" class="text-gray-400 hover:text-[#fbbf24] transition-colors text-sm">Tour Packages</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-[#fbbf24] transition-colors text-sm">About Us</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-[#fbbf24] transition-colors text-sm">Blog</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-[#fbbf24] transition-colors text-sm">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg mb-4 text-[#fbbf24]">Contact Us</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start space-x-2">
+                            <i data-lucide="map-pin" class="w-4 h-4 mt-1 text-[#fbbf24] flex-shrink-0"></i>
+                            <span class="text-gray-400 text-sm">123 Galle Road, Colombo 03, Sri Lanka</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i data-lucide="phone" class="w-4 h-4 text-[#fbbf24] flex-shrink-0"></i>
+                            <span class="text-gray-400 text-sm">+94 11 234 5678</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i data-lucide="mail" class="w-4 h-4 text-[#fbbf24] flex-shrink-0"></i>
+                            <span class="text-gray-400 text-sm">info@IPTours.lk</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg mb-4 text-[#fbbf24]">Follow Us</h3>
+                    <div class="flex space-x-3">
+                        <a href="#" class="w-10 h-10 rounded-full bg-[#1e3a8a] flex items-center justify-center hover:bg-[#fbbf24] hover:text-[#0a1628] transition-colors">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-[#1e3a8a] flex items-center justify-center hover:bg-[#fbbf24] hover:text-[#0a1628] transition-colors">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-[#1e3a8a] flex items-center justify-center hover:bg-[#fbbf24] hover:text-[#0a1628] transition-colors">
+                            <i data-lucide="twitter" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-[#3b82f6]/20 mt-8 pt-6 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 IPTours.lk. All rights reserved. Crafted with excellence.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+        // Contact form handler
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you! We\'ll get back to you within 24 hours.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
+
