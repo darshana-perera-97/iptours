@@ -11,6 +11,10 @@ function setActiveNavLink() {
     const navLinks = document.querySelectorAll('nav a[href]');
     
     navLinks.forEach(link => {
+        if (link.classList.contains('nav-logo')) {
+            link.classList.remove('active-nav-link');
+            return;
+        }
         const linkHref = link.getAttribute('href');
         let linkPage = linkHref.split('/').pop();
         
