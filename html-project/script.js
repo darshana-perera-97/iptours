@@ -7,9 +7,9 @@ function setActiveNavLink() {
     if (!currentPage || currentPage === '') {
         currentPage = 'index.html';
     }
-    
+
     const navLinks = document.querySelectorAll('nav a[href]');
-    
+
     navLinks.forEach(link => {
         if (link.classList.contains('nav-logo')) {
             link.classList.remove('active-nav-link');
@@ -17,15 +17,15 @@ function setActiveNavLink() {
         }
         const linkHref = link.getAttribute('href');
         let linkPage = linkHref.split('/').pop();
-        
+
         // Handle root/home links
         if (linkHref === '/' || linkHref === 'index.html' || linkHref === './index.html') {
             linkPage = 'index.html';
         }
-        
+
         // Remove active class from all links
         link.classList.remove('active-nav-link');
-        
+
         // Add active class to current page link
         if (linkPage === currentPage) {
             link.classList.add('active-nav-link');
@@ -34,15 +34,15 @@ function setActiveNavLink() {
 }
 
 // Mobile menu toggle
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Set active nav link
     setActiveNavLink();
-    
+
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
-    
+
     if (mobileMenuBtn && mobileMenu) {
-        mobileMenuBtn.addEventListener('click', function() {
+        mobileMenuBtn.addEventListener('click', function () {
             mobileMenu.classList.toggle('hidden');
             const icon = mobileMenuBtn.querySelector('i');
             if (icon) {
@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const featuredTours = [
         {
             id: 1,
-            image: "https://images.unsplash.com/photo-1762828982592-83f49c77e4f8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjdWx0dXJhbCUyMHRlbXBsZSUyMGFzaWF8ZW58MXx8fHwxNzYyOTQzNTQyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+            image: "./Assets/culture-tour.jpg",
             title: "Cultural Heritage Tour",
             description: "Explore ancient temples and UNESCO World Heritage sites across the cultural triangle.",
             price: "$1,299",
@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             id: 2,
-            image: "https://images.unsplash.com/photo-1535759802691-bf5a6cfe6ce9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3aWxkbGlmZSUyMHNhZmFyaSUyMGVsZXBoYW50fGVufDF8fHx8MTc2Mjk2MTM2Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+            image: "./Assets/wild-tour.jpg",
             title: "Wildlife Safari Adventure",
             description: "Encounter majestic elephants and leopards in their natural habitat at national parks.",
             price: "$1,499",
@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             id: 3,
-            image: "https://images.unsplash.com/photo-1729708790927-d14be7384d10?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBiZWFjaCUyMHJlc29ydHxlbnwxfHx8fDE3NjI4OTI3NDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+            image: "./Assets/beach-tour.jpg",
             title: "Beach Paradise Retreat",
             description: "Relax on pristine beaches with luxury accommodations and water sports activities.",
             price: "$1,799",
@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             id: 4,
-            image: "https://images.unsplash.com/photo-1603741614953-4187ed84cc50?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb3VudGFpbiUyMGFkdmVudHVyZSUyMGhpa2luZ3xlbnwxfHx8fDE3NjI5NTgzODd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+            image: "./Assets/hike-tour.jpg",
             title: "Highland Adventure Trek",
             description: "Trek through misty mountains, tea plantations, and scenic hiking trails.",
             price: "$1,199",
@@ -272,6 +272,45 @@ document.addEventListener('DOMContentLoaded', function() {
             testimonialsContainer.appendChild(testimonialCard);
         });
         lucide.createIcons();
+    }
+
+    // WhatsApp Chat Bubble Typing Effect with Loop
+    const whatsappBubble = document.getElementById('whatsapp-bubble');
+    const whatsappText = document.getElementById('whatsapp-text');
+    
+    if (whatsappBubble && whatsappText) {
+        const text = "Chat with me";
+        let typingTimeout;
+        
+        function showBubble() {
+            // Show the bubble
+            whatsappBubble.classList.add('show');
+            whatsappText.textContent = ''; // Reset text
+            
+            // Start typing effect
+            let index = 0;
+            function typeText() {
+                if (index < text.length) {
+                    whatsappText.textContent += text.charAt(index);
+                    index++;
+                    typingTimeout = setTimeout(typeText, 100); // Typing speed (100ms per character)
+                } else {
+                    // Hide bubble after showing for a while (e.g., 5 seconds after typing completes)
+                    setTimeout(() => {
+                        whatsappBubble.classList.remove('show');
+                    }, 5000);
+                }
+            }
+            
+            // Start typing after bubble appears
+            setTimeout(typeText, 300);
+        }
+        
+        // Show bubble initially after 30 seconds
+        setTimeout(showBubble, 30000);
+        
+        // Loop every 2 minutes (120000ms)
+        setInterval(showBubble, 120000);
     }
 
 });

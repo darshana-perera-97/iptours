@@ -39,7 +39,7 @@ export function BlogPost() {
         {/* Hero Image */}
         <div className="relative h-96 md:h-[500px] rounded-lg overflow-hidden mb-12">
           <img
-            src="https://images.unsplash.com/photo-1643883276945-ca185200c7b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzcmklMjBsYW5rYSUyMHNjZW5pYyUyMGxhbmRzY2FwZXxlbnwxfHx8fDE3NjI5NjEzNjJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+            src="./Assets/page-hero-section-background.jpg"
             alt="Sri Lanka landscape"
             className="w-full h-full object-cover"
           />

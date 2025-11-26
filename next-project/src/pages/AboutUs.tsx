@@ -54,7 +54,7 @@ export function AboutUs() {
       <div
         className="relative h-72 bg-cover bg-center"
         style={{
-          backgroundImage: `url(https://images.unsplash.com/photo-1643883276945-ca185200c7b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzcmklMjBsYW5rYSUyMHNjZW5pYyUyMGxhbmRzY2FwZXxlbnwxfHx8fDE3NjI5NjEzNjJ8MA&ixlib=rb-4.1.0&q=80&w=1080)`,
+          backgroundImage: `url(./Assets/page-hero-section-background.jpg)`,
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-[#0a1628]/95 to-[#1e3a8a]/90" />
